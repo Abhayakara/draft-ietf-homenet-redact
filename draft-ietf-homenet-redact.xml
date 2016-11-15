@@ -4,7 +4,7 @@
 <?rfc compact="yes" ?>
 <?rfc symrefs="no"?>
 
-<rfc obsoletes="" updates="RFC7788" category="info" ipr="trust200902"
+<rfc obsoletes="" updates="RFC7788" category="std" ipr="trust200902"
      docName="draft-ietf-homenet-redact-01">
   <front>
     <title abbrev="HNCP Redact">Redacting .home from HNCP</title>
