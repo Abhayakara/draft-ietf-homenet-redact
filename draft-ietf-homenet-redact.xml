@@ -5,7 +5,7 @@
 <?rfc symrefs="no"?>
 
 <rfc obsoletes="" updates="RFC7788" category="info" ipr="trust200902"
-     docName="draft-ietf-homenet-redact-00">
+     docName="draft-ietf-homenet-redact-01">
   <front>
     <title abbrev="HNCP Redact">Redacting .home from HNCP</title>
 
@@ -24,7 +24,7 @@
       </address>
     </author>
 
-    <date year="2016" month="August" day="26"></date>
+    <date year="2016" month="November" day="15"></date>
     <area>Internet</area>
     <workgroup>Home Networking</workgroup>
     <abstract>
@@ -54,21 +54,11 @@
       <t>Unfortunately, in the case of RFC7788, none of the people who should have caught the missing RFC6761 reference
 	did catch it, and RFC 7788 was published as a consensus document that uses '.home' without ever reserving it
 	in the RFC6761 Special-Use Domain Names registry.</t>
-
-      <t>This document updates RFC 7788 to remove the specification to use '.home' for site-local name resolution within
-	the homenet.</t>
     </section>
 
     <section title="Updates to Home Networking Control Protocol">
-      <t>The final paragraph of RFC 7788, section 8, is updated as follows:</t>
-      <t>OLD:<list style="empty">
-	  <t>Names and unqualified zones are used in an HNCP network to provide naming and service discovery with local
-	    significance.  A network-wide zone is appended to all single labels or unqualified zones in order to qualify
-	    them. ".home" is the default; however, an administrator MAY configure the announcement of a Domain-Name TLV (Section
-	    10.6) for the network to use a different one.  In case multiple are announced, the domain of the node with the greatest
-	    node identifier takes precedence.</t>
-	</list>
-	NEW: (deleted)</t>
+      <t>This document updates RFC 7788: '.home' MUST NOT be used as the default name
+         for resolution within the home network.   The new default value is specified in <xref target="I-D.pfister-homenet-dot"/></t>
     </section>
   </middle>
   
@@ -76,6 +66,7 @@
     <references title="Normative References">
       <?rfc include="reference.RFC.6761" ?>
       <?rfc include="reference.RFC.7788" ?>
+      <?rfc include="reference.I-D.pfister-homenet-dot" ?>
     </references>
   </back>
 </rfc>
